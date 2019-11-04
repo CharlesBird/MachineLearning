@@ -1,0 +1,51 @@
+- 模型演变
+  - AlexNet、VGG、ResNet、InceptionNet、MobileNet
+
+- 对比
+
+为什么要讲不同的网络结构
+- 不同的网络结构解决的问题不同
+- 不同的网络结构使用的技巧不同
+- 不同的网络结构应用的场景不同
+
+模型进化史
+ - 更深更宽————AlexNet到VGGNet
+ - 不同的模型结构————VGG到InceptionNet/ResNet
+ - 优势组合————Inception+Res = InceptionResNet
+ - 自我学习————NASNet
+ - 实用————MobileNet
+ 
+网络结构
+ - 第一个卷积层
+   - 输入224*224
+   - Stride = 4，卷积核11*11
+   - 输出大小=(输入大小-卷积核+padding)/Stride+1 = 55
+   - 参数数目=3*(11*11)*96 = 35k
+ - 首次使用Relu
+ - 2个GPU并行结构
+ - 1,2,5卷积层后跟随max-pooling层
+ - 两个全连接层上使用dropout
+ 
+网络结构-dropout
+ - 为什么用在全连接层上？
+   - 全连接层参数占全部参数数目的大部分，容易过拟合
+
+网络结构-dropout原理解释
+ - 组合解释
+   - 每次dropout都相当于训练了一个子网络
+   - 最后的结果相当于很多子网络组合
+ - 动机解释
+   - 消除了神经元之间的依赖，增强泛化能力
+ - 数据解释
+   - 对于dropout后的结果，总能找到一个样本与其对应
+   - 数据增强
+
+网络结构-其他细节
+ - 数据增强，图片随机采样
+   - [256, 256]采样[224, 224]
+ - Dropout=0.5
+ - Batch size=128
+ - SGD momentum = 0.9
+ - Learning rate = 0.01,过一定次数降低为1/10
+ - 7个CNN做ensemble: 18.2%->15.4%
+    

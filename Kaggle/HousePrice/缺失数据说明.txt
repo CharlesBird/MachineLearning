@@ -1,0 +1,177 @@
+
+LotFrontage      1201 non-null float64
+比较近的物业距离，补全缺失数据方法，随机森林法
+
+
+Alley            91 non-null object
+去物业胡同类型
+没有权限获取到，可选属性，1、空的话设为None，2、去除属性。测试那种更好
+
+MasVnrType       1452 non-null object
+切面面积，有空的情况，设为None
+
+MasVnrArea       1452 non-null float64
+切面面积，有空的情况，设为0.
+
+BsmtQual         1423 non-null object
+没有地下室，空设为None
+
+BsmtCond         1423 non-null object
+没有地下室，空设为None
+
+BsmtExposure     1422 non-null object
+没有地下室，空设为None
+
+BsmtFinType1     1423 non-null object
+没有地下室，空设为None
+
+BsmtFinType2     1422 non-null object
+没有地下室，空设为None
+
+
+Electrical       1459 non-null object
+电器设备缺少一个，使用属性group取值
+
+
+FireplaceQu      770 non-null object
+无壁炉，设为None
+
+GarageType       1379 non-null object
+无车位，设为None
+
+GarageYrBlt      1379 non-null float64
+无车位，设为0
+
+GarageFinish     1379 non-null object
+无车位，设为None
+
+
+GarageQual       1379 non-null object
+无车位，设为None
+
+GarageCond       1379 non-null object
+无车位，设为None
+
+PoolQC           7 non-null object
+无泳池，设为None
+
+Fence            281 non-null object
+无栅栏，设为空
+
+MiscFeature      54 non-null object
+未收集到设为None，或者去掉属性
+
+
+
+
+
+
+
+测试数据缺失值：
+
+MSZoning         1455 non-null object
+
+
+LotFrontage      1232 non-null float64
+
+
+Alley            107 non-null object
+
+
+Utilities        1457 non-null object
+可用的公用工具
+
+
+Exterior1st      1458 non-null object
+房屋外墙
+
+Exterior2nd      1458 non-null object
+房屋外墙（如果有多种材料）
+
+MasVnrType       1443 non-null object
+空设为None
+
+MasVnrArea       1444 non-null float64
+空设为0.
+
+BsmtQual         1415 non-null object
+没有地下室，空设为None
+
+BsmtCond         1414 non-null object
+没有地下室，空设为None
+
+BsmtExposure     1415 non-null object
+没有地下室，空设为None
+
+BsmtFinType1     1417 non-null object
+没有地下室，空设为None
+
+BsmtFinSF1       1458 non-null float64
+没有地下室，空设为0.
+
+BsmtFinType2     1417 non-null object
+没有地下室，空设为None
+
+BsmtFinSF2       1458 non-null float64
+没有地下室，空设为0.
+
+BsmtUnfSF        1458 non-null float64
+没有地下室，空设为0.
+
+TotalBsmtSF      1458 non-null float64
+没有地下室，空设为0.
+
+
+BsmtFullBath     1457 non-null float64
+没有地下室，空设为0.
+
+BsmtHalfBath     1457 non-null float64
+没有地下室，空设为0.
+
+
+KitchenQual      1458 non-null object
+厨房质量
+
+Functional       1457 non-null object
+家庭功能
+
+
+FireplaceQu      729 non-null object
+无壁炉，设为None
+
+GarageType       1383 non-null object
+无车位，设为None
+
+GarageYrBlt      1381 non-null float64
+无车位，设为0
+
+GarageFinish     1381 non-null object
+无车位，设为None
+
+GarageCars       1458 non-null float64
+无车位，设为0
+
+GarageArea       1458 non-null float64
+无车位，设为0.
+
+GarageQual       1381 non-null object
+无车位，设为None
+
+GarageCond       1381 non-null object
+无车位，设为None
+
+
+PoolQC           3 non-null object
+无泳池，设为None
+
+Fence            290 non-null object
+无栅栏，设为空
+
+MiscFeature      51 non-null object
+未收集到设为None，或者去掉属性
+
+
+SaleType         1458 non-null object
+1、众数，2、$杂项功能的价值，已售出月份（MM），已售出年份（YYYY），销售条件，组合取值
+
+

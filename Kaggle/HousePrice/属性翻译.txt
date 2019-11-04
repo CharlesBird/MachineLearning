@@ -1,0 +1,157 @@
+MSSubClass: 销售住宅类型
+
+MSZoning: 标识销售的一般分区分类。
+
+LotFrontage: 街道的线性脚连接到财产
+
+LotArea: 地块尺寸，平方英尺
+
+Street: 道路类型
+
+Alley: 通往物业的胡同类型
+
+LotShape: 房子形状
+
+LandContour: 地面平整度
+
+Utilities: 可用的公用事业类型
+
+LotConfig: 批量配置
+
+LandSlope: 物业坡度
+
+Neighborhood: 城市范围内的物理位置
+
+Condition1: 接近各种条件
+
+Condition2: 接近各种条件（如果存在多个条件）
+
+BldgType: 住宅类型
+
+HouseStyle: 住宅风格
+
+OverallQual: 评估房屋的整体材料和完工情况
+
+OverallCond: 全面评估房屋的整体状况
+
+YearBuilt: 原施工日期
+
+YearRemodAdd: 重塑日期（如果没有改造或添加，则与施工日期相同）
+
+RoofStyle: 屋顶类型
+
+RoofMatl: 屋顶材料
+
+Exterior1st: 房屋外墙
+
+Exterior2nd: 房屋外墙（如果有多种材料）
+
+MasVnrType: 砌体贴面类型
+
+MasVnrArea: 平方英尺的砌体饰面区域
+
+ExterQual: 评估外部材料的质量
+
+ExterCond: 评估外部材料的现状
+
+Foundation: 基础类型
+
+BsmtQual: 评估地下室的高度
+
+BsmtCond: 评估地下室的一般情况
+
+BsmtExposure: 指罢工或花园水平的墙壁
+
+BsmtFinType1: 地下室完工区域的评级
+
+BsmtFinSF1: 类型1完成平方英尺
+
+BsmtFinType2: 地下室成品区域的评级（如果有多种类型）
+
+BsmtFinSF2: 类型2完成平方英尺
+
+BsmtUnfSF: 地下室未完成的平方英尺
+
+TotalBsmtSF: 地下室总面积
+
+Heating: 加热类型
+
+HeatingQC: 加热质量和条件
+
+CentralAir: 中央空调
+
+Electrical: 电气系统
+
+1stFlrSF: 一楼平方英尺
+
+2ndFlrSF: 二楼平方英尺
+
+LowQualFinSF: 低质量的平方英尺（所有楼层）
+
+GrLivArea: 以上（地面）生活区平方英尺
+
+BsmtFullBath: 地下室齐全的浴室
+
+BsmtHalfBath: 地下室半浴室
+
+FullBath: 满级以上的浴室
+
+HalfBath: 半浴以上的浴室
+
+Bedroom: 楼层以上的卧室（不包括地下室卧室）
+
+KitchenAbvGr: 厨房以上
+
+KitchenQual: 厨房质量
+
+TotRmsAbvGrd: 以上级别的房间总数（不包括浴室）
+
+Functional: 家庭功能（假设除非有必要进行扣除）
+
+Fireplaces: 壁炉数量
+
+FireplaceQu: 壁炉质量
+
+GarageType: 车库位置
+
+GarageYrBlt: 年车库建成
+
+GarageFinish: 车库的内部装饰
+
+GarageCars: 车库容量的车库大小
+
+GarageArea: 车库的面积，平方英尺
+
+GarageQual: 车库质量
+
+GarageCond: 车库状况
+
+PavedDrive: 铺好的车道
+
+WoodDeckSF: 平方英尺的木甲板面积
+
+OpenPorchSF: 平方英尺的开放式门廊区域
+
+EnclosedPorch: 封闭的门廊面积，平方英尺
+
+3SsnPorch: 三个季节的门廊面积，平方英尺
+
+ScreenPorch: 屏幕门廊面积，平方英尺
+
+PoolArea: 泳池面积，平方英尺
+
+PoolQC: 泳池质量
+
+Fence: 栅栏质量
+
+MiscFeature: 其他类别未涵盖的其他功能
+
+MiscVal: $杂项功能的价值
+
+MoSold: 已售出月份（MM）
+
+YrSold: 已售出年份（YYYY）
+
+SaleType: 销售类型
+
+SaleCondition: 销售条件

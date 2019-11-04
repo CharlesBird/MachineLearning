@@ -1,0 +1,103 @@
+1、与售价关联性强的，其他特征对这些特征的关联性
+
+2、有无游泳池对房价影响
+   关联性不是很强，但可以作为一个特征
+
+3、CentralAir中央空调对房价的影响
+   有关联性
+
+4、KitchenAbvGr厨房关联性
+   待定，后期测试
+
+5、Fireplaces壁炉数量
+   有点影响，添加关联
+
+6、房子的面积
+   线性关联
+
+
+7、Neighborhood 房子地段对房价的影响
+   待定，后期再观察
+
+
+其他属性：
+ SaleCondition
+ SaleType
+ MoSold，关系不是很大，测试效果，数值类型
+ PavedDrive，有点关系，字符类型
+ GarageCond，有点关系，字符类型，1379
+ GarageQual，有点关系，字符类型，1379， 测试和训练存在不同key，所以忽略
+ GarageFinish，有点关系，字符类型，1379
+ GarageYrBlt，缺少值，数字类型，1379
+ GarageType，缺少值，字符类型，1379
+ KitchenQual，有点关系，字符类型
+ BedroomAbvGr，有点关系，数字类型
+ HalfBath，有关系，数字类型
+ BsmtFullBath，有点关系，数字类型
+ 2ndFlrSF，有关系，数字类型
+ HeatingQC，有关系，字符类型
+ Heating，有点关系，看测试结果，字符类型，测试和训练存在不同key，所以忽略
+ BsmtFinSF1，有点关系，看测试结果，数字类型
+ BsmtCond，有点关系，但缺少值太多，看测试结果，字符类型，1423
+ BsmtQual，有关系，但缺少值太多，看测试结果，字符类型，1423
+ Foundation，有点关系，看测试结果，字符类型
+ ExterQual，有点关系，看测试结果，字符类型
+ OverallCond，有点关系，看测试结果，数字类型
+ Neighborhood，有明显关系，但是需要划分几种类型，比如高档，中档，低档，数字类型
+ MSZoning，有点关系，看测试结果，字符类型
+ MSSubClass，有点关系，根据数值划分类型，60、120归为高级，30，180归为低级，其他为中级，数字类型
+
+
+Neighborhood的值分析
+avg    mid    min    max     位置     等级
+335295 301500 190000 755000  NoRidge  villa
+316270 315000 154000 611657  NridgHt  villa
+310499 278000 170000 556581  StoneBr  villa
+194871 191000 159895 264561  Blmngtn  inner
+212565 200250 130000 328000  ClearCr  inner
+197966 197200 110000 424870  CollgCr  inner
+210625 200624 90350  392500  Crawfor  inner
+192855 181000 141000 377500  Gilbert  inner
+225379 225500 144152 423000  Somerst  inner
+242247 228475 137500 378500  Timber   inner
+238772 218000 162500 385000  Veenker  inner
+137500 137500 124000 151000  Blueste  middle
+156270 153500 84500  271000  Mitchel  middle
+145847 140000 87500  345000  NAmes    middle
+142694 146000 127500 155000  NPkVill  middle
+189050 182900 82500  299800  NWAmes   middle
+186555 179900 76000  320000  SawyerW  middle
+142591 139500 60000  200000  SWISU    oldtown
+136793 135000 62383  190000  Sawyer   oldtown
+128220 121750 58500  320000  Edwards  oldtown
+124834 124300 39300  223500  BrkSide  oldtown
+128225 119000 37900  475000  OldTown  oldtown
+104494 106000 83000  125000  BrDale   outer
+100124 103000 34900  169500  IDOTRR   outer
+98576  88000  75000  151400  MeadowV  outer
+
+
+
+
+
+best_LassoCV_score 0.8326362144471108
+best_LassoCV_param {'cv': 4, 'fit_intercept': True, 'normalize': True, 'random_state': 100}
+
+
+best_Forest_reg_score 0.8672033865586902
+best_Forest_reg_param {'max_depth': None, 'max_leaf_nodes': None, 'min_samples_leaf': 1, 'n_estimators': 200, 'oob_score': True, 'random_state': 100}
+
+
+best_Gradient_reg_score 0.8961271926194416
+best_Gradient_reg_param {'loss': 'ls', 'max_depth': 5, 'max_leaf_nodes': 6, 'min_samples_leaf': 3, 'n_estimators': 200, 'random_state': 1000}
+
+
+best_AdaBoost_reg_score 0.8282443072703319
+best_AdaBoost_reg_param {'loss': 'linear', 'n_estimators': 50, 'random_state': 500}
+
+best_DecisionTree_reg_score 0.7275669488999066
+best_DecisionTree_reg_param {'min_samples_split': 0.1, 'random_state': 100}
+
+
+best_ExtraTree_reg_score 0.7801871836060533
+best_ExtraTree_reg_param {'min_samples_leaf': 9, 'random_state': 500}
