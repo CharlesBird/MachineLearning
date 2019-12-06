@@ -23,7 +23,10 @@ xs = tf.convert_to_tensor(xs, dtype=tf.float32) / 255
 db = tf.data.Dataset.from_tensor_slices((xs, ys))
 db = db.batch(batch_size).repeat(30)
 
-model = Sequential([layers.Dense(256, activation='relu'), layers.Dense(128, activation='relu'), layers.Dense(10)])
+model = Sequential([
+    layers.Dense(256, activation='relu'),
+    layers.Dense(128, activation='relu'),
+    layers.Dense(10)])
 model.build(input_shape=(4, 28*28))
 model.summary()
 

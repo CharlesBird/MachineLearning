@@ -5,12 +5,12 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 (x, y), (x_val, y_val) = datasets.mnist.load_data()
-x = tf.convert_to_tensor(x, dtype=tf.float32) / 255.
-y = tf.convert_to_tensor(y, dtype=tf.int32)
-y = tf.one_hot(y, depth=10)
+x = tf.convert_to_tensor(x, dtype=tf.float32) / 255.  # 转换为张量，缩放到-1~1
+y = tf.convert_to_tensor(y, dtype=tf.int32)  # 转换为张量
+y = tf.one_hot(y, depth=10)  # one-hot 编码
 print(x.shape, y.shape)
-train_dataset = tf.data.Dataset.from_tensor_slices((x, y))
-train_dataset = train_dataset.batch(200)
+train_dataset = tf.data.Dataset.from_tensor_slices((x, y))  # 构建数据集对象
+train_dataset = train_dataset.batch(200)  # 批量训练
 
 model = keras.Sequential([layers.Dense(256, activation='relu'), layers.Dense(128, activation='relu'), layers.Dense(10)])
 optimizer = optimizers.SGD(learning_rate=0.001)
